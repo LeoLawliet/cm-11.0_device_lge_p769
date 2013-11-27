@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory 
+    	android:title="@string/led_title" 
+    	android:key="touch_lights_preference_category">
+    
+        <CheckBoxPreference 
+            android:key="touch_led_preference"
+            android:title="@string/touch_led_title"
+            android:summary="@string/touch_led_summary"
+            android:defaultValue="false" />
+
+        <PreferenceScreen 
+            android:key="touch_blink_preference"
+            android:title="@string/touch_blink_title" >
+            android:key="touch_blink_title"
+            android:title="@string/touch_blink_title"
+            <intent android:action="com.cyanogenmod.settings.device.BlnActivity.MAIN" />
+        </PreferenceScreen>
+    
+    </PreferenceCategory>
+
+    <PreferenceCategory android:key="category_sensors"
+        android:title="@string/category_sensors_title">
+
+        <com.cyanogenmod.settings.device.VibratorIntensity
+            android:key="vibrator_intensity_preference"
+            android:title="@string/vibrator_intensity_title"
+            android:dialogTitle="@string/vibrator_intensity_title"
+            android:persistent="false" />
+    
+    </PreferenceCategory>
+
+</PreferenceScreen>

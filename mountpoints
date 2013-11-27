@@ -1,0 +1,25 @@
+ 
+root@p769:/ # mount
+rootfs / rootfs ro,noatime,nodiratime 0 0
+tmpfs /dev tmpfs rw,nosuid,noatime,nodiratime,mode=755 0 0
+devpts /dev/pts devpts rw,noatime,nodiratime,mode=600 0 0
+proc /proc proc rw,noatime,nodiratime 0 0
+sysfs /sys sysfs rw,noatime,nodiratime 0 0
+none /acct cgroup rw,noatime,nodiratime,cpuacct 0 0
+tmpfs /mnt/secure tmpfs rw,noatime,nodiratime,mode=700 0 0
+tmpfs /mnt/asec tmpfs rw,noatime,nodiratime,mode=755,gid=1000 0 0
+tmpfs /mnt/obb tmpfs rw,noatime,nodiratime,mode=755,gid=1000 0 0
+tmpfs /mnt/fuse tmpfs rw,noatime,nodiratime,mode=775,gid=1000 0 0
+none /dev/cpuctl cgroup rw,noatime,nodiratime,cpu 0 0
+/dev/block/platform/omap/omap_hsmmc.1/by-name/system /system ext4 ro,noatime,nodiratime,barrier=0,data=ordered 0 0
+/dev/block/platform/omap/omap_hsmmc.1/by-name/cache /cache ext4 rw,nosuid,nodev,noatime,nodiratime,barrier=0,data=order
+/dev/block/platform/omap/omap_hsmmc.1/by-name/userdata /data ext4 rw,nosuid,nodev,noatime,nodiratime,resuid=1000,barriea=ordered,noauto_da_alloc 0 0
+/dev/block/platform/omap/omap_hsmmc.1/by-name/persist /persist ext4 rw,nosuid,nodev,noatime,nodiratime,barrier=1,nodelata=ordered 0 0
+/sys/kernel/debug /sys/kernel/debug debugfs rw,noatime,nodiratime 0 0
+/dev/block/dm-0 /mnt/asec/eu.chainfire.supersu.pro-1 ext4 ro,dirsync,nosuid,nodev,noatime,nodiratime,barrier=1 0 0
+/dev/block/dm-1 /mnt/asec/com.ksharkapps.buildproptweaker-1 ext4 ro,dirsync,nosuid,nodev,noatime,nodiratime,barrier=1 0
+/dev/block/dm-2 /mnt/asec/hu.tagsoft.ttorrent.pro-2 ext4 ro,dirsync,nosuid,nodev,noatime,nodiratime,barrier=1 0 0
+/dev/block/vold/179:61 /storage/sdcard0 vfat rw,dirsync,nosuid,nodev,noexec,noatime,nodiratime,uid=1000,gid=1015,fmask=ask=0702,allow_utime=0020,codepage=cp437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro 0 0
+/dev/block/vold/179:61 /mnt/secure/asec vfat rw,dirsync,nosuid,nodev,noexec,noatime,nodiratime,uid=1000,gid=1015,fmask=ask=0702,allow_utime=0020,codepage=cp437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro 0 0
+tmpfs /storage/sdcard0/.android_secure tmpfs ro,noatime,nodiratime,size=0k,mode=000 0 0
+root@p769:/ # 
